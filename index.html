@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpha Meat Suppliers | Nanyuki</title>
+  <meta name="description" content="Alpha Meat Suppliers, Nanyuki &amp; environs. Beef, mutton, chevon, offal and dog food. Call or WhatsApp to order." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red: #b3262a;
+      --primary: #313439;
+      --primary-dark: #1f2124;
+      --red-dark: #8f1d20;
+      --ink: #1b1b1b;
+      --text: #555;
+      --line: #e8e8e8;
+      --soft: #f5f5f5;
+      --footer: #151515;
+      --wa: #25a559;
+      --wrap: 1170px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Montserrat", Arial, sans-serif; font-size: 15px; line-height: 1.7; color: var(--text); background: #fff; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1, h2, h3, h4, .yk { font-family: "Yanone Kaffeesatz", Impact, sans-serif; text-transform: uppercase; color: var(--ink); line-height: 1.1; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 15px; }
+
+    .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: #fff; padding: 13px 30px; font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; font-size: 1.15rem; font-weight: 600; letter-spacing: .05em; transition: background .2s; }
+    .btn:hover { background: var(--primary-dark); }
+    .btn svg { width: 20px; height: 20px; }
+
+    /* 1. TOP STRIP */
+    .topbar { background: #fff; color: var(--text); font-size: 13px; border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: flex-start; gap: 24px; min-height: 38px; }
+    .topbar span { display: inline-flex; align-items: center; gap: 8px; }
+    .topbar svg { width: 14px; height: 14px; color: var(--red); flex: none; }
+    .topbar a:hover { color: var(--ink); }
+
+    /* 2. NAVBAR */
+    .header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+    .header .wrap { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo svg { width: 48px; height: 48px; }
+    .logo b { font-family: "Yanone Kaffeesatz", sans-serif; font-size: 1.9rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--primary); white-space: nowrap; line-height: 1; }
+    .menu { display: flex; gap: 38px; }
+    .menu a { font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; font-size: 1.25rem; font-weight: 600; letter-spacing: .04em; color: var(--ink); transition: color .2s; }
+    .menu a:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+    .burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+    .burger span { display: block; width: 26px; height: 2px; background: var(--ink); margin: 6px 0; }
+
+    /* 3. HERO (single image) */
+        .hero { position: relative; height: 600px; display: flex; flex-direction: column; justify-content: center; padding-bottom: 130px; text-align: center; color: #fff;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.75) 100%),
+        url("images/hero.jpeg") center/cover no-repeat,
+        linear-gradient(135deg, #3a1213 0%, #7c1d20 55%, #2a0d0e 100%); }
+    .hero > .wrap { width: 100%; }
+    .hero h1 { color: #fff; font-size: clamp(3.4rem, 10vw, 7rem); font-weight: 700; line-height: 1; letter-spacing: 0; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+    .hero p { font-family: "Yanone Kaffeesatz", sans-serif; text-transform: none; font-size: clamp(1.4rem, 3vw, 2.3rem); font-weight: 600; line-height: 1.1; letter-spacing: 0; margin: 0; text-shadow: 0 2px 14px rgba(0,0,0,.35); }
+
+    /* 3b. FEATURES */
+    .features { position: absolute; left: 0; right: 0; bottom: 0; }
+    .features .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 26px; padding-bottom: 26px; }
+    .feature { display: flex; align-items: flex-start; gap: 18px; }
+    .feature i { font-size: 2.4rem; width: 48px; text-align: center; flex: none; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+    .feature div { font-family: "Montserrat", Arial, sans-serif; font-size: .95rem; font-weight: 600; line-height: 1.4; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+
+    /* 4. PRODUCTS */
+    .section { padding: 80px 0; }
+    .shead { text-align: left; max-width: 640px; margin: 0 0 44px; }
+    .shead h2 { font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 8px; }
+    .shead h2::after { content: ""; display: block; width: 60px; height: 3px; background: var(--red); margin: 14px 0 0; }
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .card { position: relative; aspect-ratio: 3/4; overflow: hidden; display: flex; align-items: flex-end; color: #fff;
+      background: linear-gradient(160deg, #6d1b1d, #2a0d0e); }
+    .card .photo { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .5s; }
+    .card:hover .photo { transform: scale(1.06); }
+    .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0,0,0,.78)); }
+    .card h3 { position: relative; z-index: 1; color: #fff; font-size: 1.7rem; font-weight: 600; padding: 18px; letter-spacing: .03em; }
+
+    /* 5. DELIVERY */
+    .delivery { background: var(--soft); }
+    .delivery .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .delivery figure { aspect-ratio: 4/3; background: url("images/delivery.webp") center/cover no-repeat, linear-gradient(135deg, #3a1213, #7c1d20); }
+    .delivery h2 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 16px; }
+    .delivery p { font-size: 1.05rem; margin-bottom: 26px; max-width: 480px; }
+
+    /* 6. FOOTER */
+    footer { background: var(--footer); color: #969696; font-size: 13.5px; padding-top: 64px; }
+    footer .cols { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    footer h4 { color: #fff; font-size: 1.5rem; font-weight: 600; letter-spacing: .05em; margin-bottom: 16px; }
+    footer li { padding: 3px 0; }
+    footer a:hover { color: #fff; }
+    .call .title { font-family: "Montserrat", Arial, sans-serif; text-transform: uppercase; color: #fff; letter-spacing: .2em; font-size: .9rem; font-weight: 600; }
+    .call .phone { font-family: "Montserrat", Arial, sans-serif; color: #fff; font-size: 2rem; font-weight: 600; line-height: 1.1; margin-bottom: 26px; display: block; }
+    .call h5 { font-size: 13.5px; font-weight: 400; color: #969696; }
+    .call a.dir { color: #fff; text-decoration: underline; display: inline-block; margin-top: 12px; }
+    .copy { border-top: 1px solid #2b2b2b; margin-top: 56px; padding: 20px 0; font-size: 12.5px; text-align: left; }
+
+    @media (max-width: 980px) {
+      .hero { height: auto; min-height: 480px; padding: 56px 0 0; }
+      .hero > .wrap { padding-bottom: 40px; }
+      .features { position: static; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .delivery .wrap { grid-template-columns: 1fr; gap: 32px; }
+      .features .wrap { grid-template-columns: 1fr; gap: 14px; padding-top: 18px; padding-bottom: 18px; }
+      .feature i { font-size: 1.8rem; width: 36px; }
+      .feature div { font-size: .9rem; }
+    }
+    @media (max-width: 760px) {
+      .section { padding: 56px 0; }
+      .topbar .wrap { gap: 10px; font-size: 12px; }
+      .burger { display: block; }
+      .menu { position: absolute; top: 84px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); flex-direction: column; gap: 0; padding: 6px 15px 14px; display: none; }
+      .menu.open { display: flex; }
+      .menu a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
+      .cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .card h3 { font-size: 1.35rem; padding: 12px; }
+      footer .cols { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOP STRIP: location + phone -->
+  <div class="topbar">
+    <div class="wrap">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Nanyuki &amp; environs
+      </span>
+      <a href="tel:+254726001522" class="tel">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span class="phone-text">0726 001 522</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR: logo left, menu right -->
+  <header class="header">
+    <div class="wrap">
+      <a href="#top" class="logo" aria-label="Alpha Meat Suppliers">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" fill="#b3262a"/>
+          <path d="M12 16c2 9 9 13 16 13M52 16c-2 9-9 13-16 13" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M19 53 32 22l13 31M24 43h16" stroke="#fff" stroke-width="5.5" fill="none" stroke-linejoin="round"/>
+        </svg>
+        <b>Alpha Meat Suppliers</b>
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav>
+        <ul class="menu">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 3. HERO: one image (images/hero.jpeg) -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Fresh meat</h1>
+        <p>Straight to your door</p>
+      </div>
+
+      <!-- FEATURES (inside hero, pinned to bottom) -->
+      <div class="features">
+        <div class="wrap">
+          <div class="feature">
+            <i class="fa-solid fa-cow" aria-hidden="true"></i>
+            <div>Beef, mutton, chevon, offal and dog food</div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            <div>Delivered across Nanyuki &amp; environs</div>
+          </div>
+          <div class="feature">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <div>Order by call or WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUCTS: exactly the catalogue, no prices.
+         Photos live in images/; set style="background-image:url(...)" on .photo -->
+    <section class="section" id="products">
+      <div class="wrap">
+        <div class="shead">
+          <h2>Our Products</h2>
+          <p>Call or WhatsApp us for today's availability and prices.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="photo" style="background-image:url(images/beef_on_bone.jpeg)"></div><h3>Beef on bone</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/beef_steak.webp)"></div><h3>Beef steak</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/minced_beef.webp)"></div><h3>Minced beef</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/mutton.webp)"></div><h3>Mutton / Chevon</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/beef_matumbo.webp)"></div><h3>Beef Matumbo</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/mbuzi_matumbo.webp)"></div><h3>Matumbo mbuzi</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/bones_for_soup.jpeg)"></div><h3>Bones for soup</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/liver.webp)"></div><h3>Liver</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/kidney.jpeg)"></div><h3>Kidneys</h3></div>
+          <div class="card"><div class="photo" style="background-image:url(images/dog_food.webp)"></div><h3>Dog food</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. DELIVERY: image left, text + button right (as in the reference). Image: images/delivery.webp -->
+    <section class="section delivery" id="delivery">
+      <div class="wrap">
+        <figure role="img" aria-label="Alpha Meat Suppliers delivery"></figure>
+        <div>
+          <h2>We Deliver</h2>
+          <p>We deliver across Nanyuki &amp; environs. Call or WhatsApp us to place your order.</p>
+          <a class="btn wa wa-link" href="#" data-msg="Hi Alpha Meat Suppliers, I'd like to arrange a delivery.">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>
+            Order on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. FOOTER: call now + visit us, then link columns -->
+  <footer id="contact">
+    <div class="wrap cols">
+      <div class="call">
+        <div class="title">Call now</div>
+        <a class="phone tel" href="tel:+254726001522"><span class="phone-text">0726 001 522</span></a>
+        <h5>Visit us at:</h5>
+        <h5>Alpha Meat Suppliers</h5>
+        <h5>Nanyuki &amp; environs</h5>
+        <a class="dir" href="https://maps.google.com/?q=Nanyuki" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div>
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="#products">Beef on bone</a></li>
+          <li><a href="#products">Beef steak</a></li>
+          <li><a href="#products">Minced beef</a></li>
+          <li><a href="#products">Mutton / Chevon</a></li>
+          <li><a href="#products">Beef Matumbo</a></li>
+          <li><a href="#products">Matumbo mbuzi</a></li>
+          <li><a href="#products">Bones for soup</a></li>
+          <li><a href="#products">Liver</a></li>
+          <li><a href="#products">Kidneys</a></li>
+          <li><a href="#products">Dog food</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a class="wa-link" href="#" data-msg="Hi Alpha Meat Suppliers!">WhatsApp</a></li>
+          <li><a class="tel" href="tel:+254726001522">Call us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr"></span> Alpha Meat Suppliers. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Set the real number here once (international format, digits only)
+    const PHONE = "254726001522";
+    const PHONE_DISPLAY = "0726 001 522";
+
+    document.querySelectorAll(".wa-link").forEach(a => {
+      a.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(a.dataset.msg || "Hi Alpha Meat Suppliers!")}`;
+      a.target = "_blank"; a.rel = "noopener";
+    });
+    document.querySelectorAll("a.tel").forEach(a => a.href = `tel:+${PHONE}`);
+    document.querySelectorAll(".phone-text").forEach(s => s.textContent = PHONE_DISPLAY);
+
+    const burger = document.querySelector(".burger"), menu = document.querySelector(".menu");
+    burger.addEventListener("click", () => burger.setAttribute("aria-expanded", menu.classList.toggle("open")));
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.classList.remove("open")));
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
